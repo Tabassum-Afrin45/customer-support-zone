@@ -1,3 +1,4 @@
+import ProgressTask from "./components/Banner"
 import Navbar from "./components/Navbar"
 
 const App=()=>{
@@ -6,8 +7,8 @@ const App=()=>{
       <Navbar></Navbar>
     </header>
     <div className="bg-gray-100 h-125">
-      <section>
-
+      <section className="w-11/12 mx-auto py-12">
+         <ProgressTask></ProgressTask>
       </section>
     </div>
   </div>   
