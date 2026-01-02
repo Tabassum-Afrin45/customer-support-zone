@@ -2,7 +2,7 @@ import { Plus } from "lucide-react";
 const Navbar = () => {
   return (
     <div className="content-box flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5">
-      <h2 className="text-xl font-bold text-shadow-xs">CS — Ticket System
+      <h2 className="text-xl font-bold">CS — Ticket System
       </h2>
       <nav>
         <ul className="flex gap-10">

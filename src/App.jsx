@@ -8,7 +8,7 @@ const App=()=>{
     <header className="w-11/12 mx-auto my-3">
       <Navbar></Navbar>
     </header>
-    <div className="bg-gray-100 h-200">
+    <div className="bg-gray-100 h-full">
       <section className="w-11/12 mx-auto py-12">
       <Suspense fallback={"Loading..."}>
         <TaskStatus promise={ticketsPromise}></TaskStatus>
