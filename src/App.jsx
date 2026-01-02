@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Navbar from "./components/Navbar"
 import TaskStatus from "./components/TaskStatus";
+import { ToastContainer } from "react-toastify";
 const loadTickets=()=>fetch("/tickets.json").then((res)=>res.json());
 const App=()=>{
   const ticketsPromise=loadTickets();
@@ -14,6 +15,7 @@ const App=()=>{
         <TaskStatus promise={ticketsPromise}></TaskStatus>
       </Suspense>
       </section>
+      <ToastContainer></ToastContainer>
     </div>
   </div>   
 }
