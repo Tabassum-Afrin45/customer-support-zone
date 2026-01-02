@@ -1,8 +1,9 @@
+import { Calendar } from "lucide-react";
 
-const CustomerTicket = ({ticket}) => {
-console.log(ticket)
+const CustomerTicket = ({ticket,handleTicket}) => {
+// console.log(ticket)
   return (
-    <div className="p-5 rounded-xl shadow-sm relative space-y-3 bg-white mt-3">
+    <div onClick={()=>handleTicket(ticket)} className="p-5 rounded-xl shadow-sm relative space-y-3 bg-white mt-3">
       {/* Ticket Heading */}
       <h2 className="flex items-center justify-between">
         <p>{ticket.title} </p>
@@ -13,7 +14,7 @@ console.log(ticket)
     </h2>
 
       {/* Description*/}
-      <p className="text-[16px] font-light">
+      <p className="text-[16px] text-gray-500 font-normal">
         {ticket.description}
       </p>
       {/* others info */}
@@ -22,9 +23,9 @@ console.log(ticket)
           <p className="text-sm font-medium text-gray-500">#{ticket.id}</p>
           <p className="text-sm text-amber-300">{ticket.priority}</p>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2">
           <p className="text-sm font-light">{ticket.customer}</p>
-          <p className="text-sm font-light">{ticket.createdAt}</p>
+          <p className="text-sm font-light flex flex-row gap-0.5"><Calendar/>{ticket.createdAt}</p>
        
         </div>
 
